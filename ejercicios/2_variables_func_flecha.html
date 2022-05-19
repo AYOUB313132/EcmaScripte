@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+EJERCICIO SOBRE VARIABLES (VAR, LET, CONST) Y FUNCIONES FLECHA
+EJERCICIO 1:
+1.- Se mostrará/ocultará el párrafo en función de su estado (si está oculto se mostrará, 
+si no al revés)
+Además, se modificará el mensaje del enlace para que sea el adecuado: "mostrar contenido"
+/"ocultar contenido"
+
+EJERCICIO 2:
+Cogeremos el nombre y la población introducida en los input para sacar el mensaje
+"Hola <nombre>, de <población> ¡Me alegro de verte! 
+-->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>PRÁCTICA VAR, LET, FUNCIONES FLECHA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>PRÁCTICA VAR, LET, FUNCIONES FLECHA</h1>
+    </header>
+    <hr/>
+
+    <h2>Ejercicio 1</h2>
+
+    <p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque
+        massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna
+        consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <footer>
+        <a id="enlace_1" href="#">Ocultar contenidos</a>
+    </footer>
+    <hr/>
+    <h2>Ejercicio 2</h2>
+    <p>Hola, ¿tu nombre y población?</p>
+    Nombre: <input type="text" id="nombre"> Población: <input type="text" id="poblacion">
+    <footer>
+        <button class="button">
+        saludar
+        <div class="button__horizontal"></div>
+        <div class="button__vertical"></div>
+    </button>
+        <p id="salida"></p>
+        <!-- Aquí se mostrará lo que pide el ejercicio -->
+    </footer>
+    <hr/>
+
+    <script src="2_variables_func_flecha.js"></script>
+</body>
+
+</html>
