@@ -29,18 +29,18 @@ viernes = Ostirala
 */
 function emparejar() {
     counter = 0;
-    let select1 = document.getElementsByTagName('select')[0];
-    let f = select1.options[select1.selectedIndex].value
-    let select2 = document.getElementsByTagName('select')[1];
-    let h = select2.options[select2.selectedIndex].value
+    let euskera = document.getElementsByTagName('select')[0];
+    let eus = euskera.options[euskera.selectedIndex].value
+    let castellano = document.getElementsByTagName('select')[1];
+    let cas = castellano.options[castellano.selectedIndex].value
 
-    if (f == 0 && h == 0) {
+    if (eus == 0 && cas == 0) {
         alert('Selecciona dia')
 
-    } else if (h == 'viernes' && f == 'Ostirala' || h == 'jueves' && f == 'Osteguna' || h == 'miercoles' && f == 'Asteazkena' || h == 'martes' && f == 'Asteartea' || h == 'lunes' && f == 'Astelehena') {
-        alert('Perfecto')
+    } else if (cas == 'viernes' && eus == 'Ostirala' || cas == 'jueves' && eus == 'Osteguna' || cas == 'miercoles' && eus == 'Asteazkena' || cas == 'martes' && eus == 'Asteartea' || cas == 'lunes' && eus == 'Astelecasena') {
+        alert('Pereusecto')
     } else {
-        alert('Falta')
+        alert('eusalta')
 
         strong[0].innerHTML -= 1;
         if (strong[0].innerHTML == 0) {
@@ -53,7 +53,7 @@ function emparejar() {
 
 function verSolucion() {
     alert('are you sur')
-    let qstn = prompt('if your sur write yes')
+    let qstn = prompt('if your are sur write yes')
     if (qstn == 'yes') {
         alert('lunes = Astelehena \n martes = Asteartea \n miercoles = Asteazkena \n jueves = Osteguna \n viernes = Ostirala')
     } else {
