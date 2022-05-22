@@ -72,15 +72,15 @@ const kvArray = [
 ]
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
-const myMap = new Map(kvArray)
+const myMap3 = new Map(kvArray)
 
-myMap.get('key1') // returns "value1"
+myMap3.get('key1') // returns "value1"
 
 // Use Array.from() to transform a map into a 2D key-value Array
-console.log(Array.from(myMap)) // Will show you exactly the same Array as kvArray
+console.log(Array.from(myMap3)) // Will show you exactly the same Array as kvArray
 
 // A succinct way to do the same, using the spread syntax
-console.log([...myMap])
+console.log([...myMap3])
 
 // Or use the keys() or values() iterators, and convert them to an array
-console.log(Array.from(myMap.keys())) // ["key1", "key2"]
+console.log(Array.from(myMap3.keys())) // ["key1", "key2"]
