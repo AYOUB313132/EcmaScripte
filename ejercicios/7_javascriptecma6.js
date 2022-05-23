@@ -27,20 +27,73 @@ miercoles = Asteazkena
 jueves = Osteguna
 viernes = Ostirala
 */
+/*
+let selections = document.getElementsByTagName('select')
+let selectEus = document.getElementsByTagName('select')[0]
+let selectCas = document.getElementsByTagName('select')[1]
+for (let slct of selections) {
+
+    emparejar = () => {
+        let eusk = selections[0].options[selections[0].selectedIndex]
+        let cast = selections[1].options[selections[1].selectedIndex]
+        console.log(eusk.value)
+        console.log(cast.value)
+
+        //selections[0].removeChild(choise)
+    }
+}
+*/
+
+
+/*
+let myEus = new Map();
+let myCas = new Set();
+myCas.add('Asteartea').add('Astelehena').add('Asteazkena').add('Osteguna').add('Ostirala')
+console.log(myCas)
+*/
+
 function emparejar() {
     counter = 0;
     let euskera = document.getElementsByTagName('select')[0];
-    let eus = euskera.options[euskera.selectedIndex].value
+    let eusk = euskera.options[euskera.selectedIndex]
     let castellano = document.getElementsByTagName('select')[1];
-    let cas = castellano.options[castellano.selectedIndex].value
+    let cast = castellano.options[castellano.selectedIndex]
 
-    if (eus == 0 && cas == 0) {
+    if (eusk.value == 0 && cast.value == 0) {
         alert('Selecciona dia')
 
-    } else if (cas == 'viernes' && eus == 'Ostirala' || cas == 'jueves' && eus == 'Osteguna' || cas == 'miercoles' && eus == 'Asteazkena' || cas == 'martes' && eus == 'Asteartea' || cas == 'lunes' && eus == 'Astelecasena') {
-        alert('Pereusecto')
+    } else if (cast.value == 'viernes' && eusk.value == 'Ostirala') {
+        alert('Perfecto');
+        euskera.removeChild(eusk)
+        castellano.removeChild(cast)
+
+    } else if (cast.value == 'jueves' && eusk.value == 'Osteguna') {
+        alert('Perfecto')
+        euskera.removeChild(eusk)
+        castellano.removeChild(cast)
+    } else if (cast.value == 'miercoles' && eusk.value == 'Asteazkena') {
+        alert('Perfecto')
+        euskera.removeChild(eusk)
+        castellano.removeChild(cast)
+    } else if (cast.value == 'martes' && eusk.value == 'Asteartea') {
+        alert('Perfecto')
+        euskera.removeChild(eusk)
+        castellano.removeChild(cast)
+    } else if (cast.value == 'lunes' && eusk.value == 'Astelecasena') {
+        alert('Perfecto')
+        euskera.removeChild(eusk)
+        castellano.removeChild(cast)
     } else {
-        alert('eusalta')
+        alert('Error')
+
+        // euskera.firstElementChild.selected
+        // castellano.firstElementChild.setAttribute('selected', '')
+        // euskera.firstElementChild.setAttribute('selected', '')
+        for (let esk of euskera) {
+            if (esk.value == 0) {
+                esk.setAttribute('selected', '')
+            }
+        }
 
         strong[0].innerHTML -= 1;
         if (strong[0].innerHTML == 0) {
