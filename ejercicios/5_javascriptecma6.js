@@ -6,22 +6,7 @@ let cambiarEstilo = document.querySelector('[value="cambiar estilo pares"]');
 let cambiarNombre = document.querySelector('[value="cambiar nombre enlace"]');
 let resetear = document.querySelector('[value="resetear"]');
 
-myLinkArray = [];
-let myLinkMap = new Map();
-for (let i = 0; i < links.length; i++) {
-    //myLinkArray.push(links[i].textContent)
-    myLinkMap.set(links[i].textContent);
-}
-//console.log(myLinkArray);
-
-//let myLinkMap = new Map();
-
-console.log(myLinkMap)
-
-
-
-console.log(mostrarUrl.textContent)
-
+/*
 mostrarUrl.onclick = function() {
     let link = [];
     links.forEach(function(e) {
@@ -103,5 +88,28 @@ cambiarNombreEnlace = () => {
             parraf.getElementsByTagName('a')[0].innerHTML = 'Github';
             break;
         }
+    }
+}
+*/
+/*==================== otra manera ======================*/
+
+
+
+const botones = document.getElementsByTagName('input');
+
+for (let boton of botones) {
+    if (boton.value == 'Ver Direcciones URL')
+        boton.onclick = () => { VerDireccionesURL(); }
+    else if (boton.value == 'cambiar estilo pares')
+        boton.onclick = () => { cambiarEstiloPares(); }
+    else if (boton.value == 'cambiar nombre enlace')
+        boton.onclick = () => { cambiarNombreEnlace(); }
+    else boton.onclick = () => { location.reload(); }
+}
+let myMap = new Map();
+
+VerDireccionesURL = () => {
+    for ( let link of links) {
+        myMap.set('url', link)
     }
 }
